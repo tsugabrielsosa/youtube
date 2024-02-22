@@ -1,0 +1,13 @@
+ip a
+▪️ cd /etc/netplan
+▪️ ls
+▪️ sudo nano 00-installer-config-yaml
+------------------------------AGREGAR--------------------
+addresses: [192.168.3.45/24]
+      routes:
+      	- to: default
+          via: 192.168.3.1
+      nameservers:
+         addresses: [8.8.8.8]
+-------------------------------------------------------
+sudo netplan apply
