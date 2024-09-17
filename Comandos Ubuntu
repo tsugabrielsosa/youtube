@@ -1,0 +1,21 @@
+
+
+Actualizar Repositorios y paquetes
+sudo apt update && sudo apt upgrade
+
+Ver IP
+ifconfig
+
+Instalar Herramientas de red
+sudo apt install net-tools
+
+Firewall
+sudo ufw status
+sudo ufw enable
+sudo ufw allow NUMERODEPUERTO
+
+Instalar Webmin
+1) wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+2) sudo sh -c 'echo "deb https://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list'
+3) sudo apt update
+4) sudo apt install webmin
