@@ -1,0 +1,10 @@
+WUSA (Windows Update Standalone Installer)
+wmic qfe list brief /format:table
+wusa /uninstall /kb:5074109
+Si quieres que no pida confirmación y reinicie solo:
+wusa /uninstall /kb:5074109 /quiet /norestart
+
+Con DISM (Deployment Image Servicing and Management)
+dism /online /get-packages | findstr KB5074109
+Copia el nombre completo del paquete (algo como Package_for_KB5074109~31bf3856ad364e35~amd64~~26100.7623.1.9).
+dism /online /remove-package /PackageName:Package_for_KB5074109~31bf3856ad364e35~amd64~~26100.7623.1.9
